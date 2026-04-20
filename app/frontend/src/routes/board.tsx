@@ -1,25 +1,20 @@
-import { createFileRoute, useNavigate } from "@tanstack/react-router";
-import { useEffect } from "react";
+import { createFileRoute } from "@tanstack/react-router";
 
-import { InvitePanel } from "@/components/InvitePanel";
-import { Button } from "@/components/ui/button";
-import { useCurrentUser, useSignOut } from "@/hooks/useCurrentUser";
+import { InvitePanel } from "@/features/teams";
+import { Button } from "@/shared/ui/button";
+import { useSignOut } from "@/features/auth";
+import { useCurrentUser } from "@/shared/model/useCurrentUser";
 
 export const Route = createFileRoute("/board")({
   component: Board,
 });
 
 function Board() {
-  const navigate = useNavigate();
   const { currentTeam } = useCurrentUser();
   const signOut = useSignOut();
 
-  useEffect(() => {
-    if (!currentTeam) {
-      navigate({ to: "/onboarding" });
-    }
-  }, [currentTeam, navigate]);
-
+  // AuthGate guarantees we only render here with a current team; bail safely
+  // during any transient state mid-navigation (e.g. sign-out invalidation).
   if (!currentTeam) {
     return null;
   }

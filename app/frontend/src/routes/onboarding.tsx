@@ -2,11 +2,11 @@ import { createFileRoute, useNavigate } from "@tanstack/react-router";
 import { useQueryClient } from "@tanstack/react-query";
 import { useState, type FormEvent } from "react";
 
-import { createTeamApiTeamsPost, updateMeApiUsersMePatch } from "@/api/generated";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { currentUserQueryKey, useCurrentUser } from "@/hooks/useCurrentUser";
+import { createTeamApiTeamsPost, updateMeApiUsersMePatch } from "@/shared/api/generated";
+import { Button } from "@/shared/ui/button";
+import { Input } from "@/shared/ui/input";
+import { Label } from "@/shared/ui/label";
+import { currentUserQueryKey, useCurrentUser } from "@/shared/model/useCurrentUser";
 
 export const Route = createFileRoute("/onboarding")({
   component: Onboarding,

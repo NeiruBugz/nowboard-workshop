@@ -2,10 +2,10 @@ import { createFileRoute, useNavigate } from "@tanstack/react-router";
 import { useQueryClient } from "@tanstack/react-query";
 import { useEffect, useState } from "react";
 
-import { joinTeamApiTeamsJoinPost } from "@/api/generated";
-import { Button } from "@/components/ui/button";
-import { SwitchTeamDialog } from "@/components/SwitchTeamDialog";
-import { currentUserQueryKey, useCurrentUser } from "@/hooks/useCurrentUser";
+import { joinTeamApiTeamsJoinPost } from "@/shared/api/generated";
+import { Button } from "@/shared/ui/button";
+import { SwitchTeamDialog } from "@/features/teams";
+import { currentUserQueryKey, useCurrentUser } from "@/shared/model/useCurrentUser";
 
 export const PENDING_INVITE_KEY = "pending_invite_code";
 

@@ -3,7 +3,7 @@ import { render, screen, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
-vi.mock("@/api/generated", () => ({
+vi.mock("@/shared/api/generated", () => ({
   signInApiAuthSignInPost: vi.fn(),
   signUpApiAuthSignUpPost: vi.fn(),
   joinTeamApiTeamsJoinPost: vi.fn(),
@@ -12,9 +12,9 @@ vi.mock("@/api/generated", () => ({
 import {
   signInApiAuthSignInPost,
   signUpApiAuthSignUpPost,
-} from "@/api/generated";
+} from "@/shared/api/generated";
 import { AuthForm } from "./AuthForm";
-import { currentUserQueryKey } from "@/hooks/useCurrentUser";
+import { currentUserQueryKey } from "@/shared/model/useCurrentUser";
 
 const signInMock = vi.mocked(signInApiAuthSignInPost);
 const signUpMock = vi.mocked(signUpApiAuthSignUpPost);

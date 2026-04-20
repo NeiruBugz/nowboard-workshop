@@ -3,9 +3,9 @@ import { RouterProvider, createRouter } from "@tanstack/react-router";
 import { StrictMode } from "react";
 import ReactDOM from "react-dom/client";
 
-import "./api/client";
-import "./index.css";
-import { routeTree } from "./routeTree.gen";
+import "@/shared/api/client";
+import "@/index.css";
+import { routeTree } from "@/routeTree.gen";
 
 const router = createRouter({ routeTree });
 const queryClient = new QueryClient();

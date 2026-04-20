@@ -5,11 +5,11 @@ import {
   joinTeamApiTeamsJoinPost,
   signInApiAuthSignInPost,
   signUpApiAuthSignUpPost,
-} from "@/api/generated";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { currentUserQueryKey } from "@/hooks/useCurrentUser";
+} from "@/shared/api/generated";
+import { currentUserQueryKey } from "@/shared/model/useCurrentUser";
+import { Button } from "@/shared/ui/button";
+import { Input } from "@/shared/ui/input";
+import { Label } from "@/shared/ui/label";
 
 const PENDING_INVITE_KEY = "pending_invite_code";
 

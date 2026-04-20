@@ -1,11 +1,11 @@
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { useEffect, useState } from "react";
 
-import { regenerateCurrentInviteApiTeamsCurrentInviteRegeneratePost } from "@/api/generated";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { currentUserQueryKey } from "@/hooks/useCurrentUser";
+import { regenerateCurrentInviteApiTeamsCurrentInviteRegeneratePost } from "@/shared/api/generated";
+import { currentUserQueryKey } from "@/shared/model/useCurrentUser";
+import { Button } from "@/shared/ui/button";
+import { Input } from "@/shared/ui/input";
+import { Label } from "@/shared/ui/label";
 
 type Props = { inviteUrl: string };
 

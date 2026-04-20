@@ -1,7 +1,7 @@
-import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
+import { useQuery } from "@tanstack/react-query";
 
-import { readMeApiUsersMeGet, signOutApiAuthSignOutPost } from "@/api/generated";
-import type { CurrentTeamOut, UserOut } from "@/api/generated";
+import { readMeApiUsersMeGet } from "@/shared/api/generated";
+import type { CurrentTeamOut, UserOut } from "@/shared/api/generated";
 
 export const currentUserQueryKey = ["current-user"] as const;
 
@@ -10,13 +10,6 @@ type CurrentUserResult = {
   current_team: CurrentTeamOut | null;
 };
 
-/**
- * The response interceptor in `api/client.ts` throws on any non-2xx, so a
- * 401 (no session) surfaces as a thrown Error here. We treat any thrown
- * error from `readMeApiUsersMeGet` as "no user" rather than trying to parse
- * the JSON-stringified payload — simpler and the endpoint only meaningfully
- * fails with 401 in normal flow.
- */
 export function useCurrentUser() {
   const query = useQuery<CurrentUserResult>({
     queryKey: currentUserQueryKey,
@@ -48,20 +41,4 @@ export function useCurrentUser() {
     isLoading: query.isLoading,
     refetch: query.refetch,
   };
-}
-
-export function useSignOut() {
-  const queryClient = useQueryClient();
-  return useMutation({
-    mutationFn: async () => {
-      try {
-        await signOutApiAuthSignOutPost();
-      } catch {
-        // Swallow — cookie may already be cleared; we still drop cached user.
-      }
-    },
-    onSettled: async () => {
-      await queryClient.invalidateQueries({ queryKey: currentUserQueryKey });
-    },
-  });
 }

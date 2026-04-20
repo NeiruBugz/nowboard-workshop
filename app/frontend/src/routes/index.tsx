@@ -1,7 +1,7 @@
 import { createFileRoute, Navigate } from "@tanstack/react-router";
 
-import { AuthForm } from "@/components/AuthForm";
-import { useCurrentUser } from "@/hooks/useCurrentUser";
+import { AuthForm } from "@/features/auth";
+import { useCurrentUser } from "@/shared/model/useCurrentUser";
 
 export const Route = createFileRoute("/")({
   component: Index,
