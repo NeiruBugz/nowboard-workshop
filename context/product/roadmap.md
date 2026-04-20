@@ -8,9 +8,9 @@ _This roadmap outlines our strategic direction based on customer needs and busin
 
 _The highest priority features that form the core foundation of the product — the minimum a team needs to replace their daily standup._
 
-- [ ] **Team & Account Essentials**
-  - [ ] **Sign-Up & Login:** Let users create an account and sign in securely via email + password.
-  - [ ] **Create or Join a Team:** Let the first user create a team workspace and invite teammates via a shared link, so everyone lands on the same board.
+- [x] **Team & Account Essentials**
+  - [x] **Sign-Up & Login:** Let users create an account and sign in securely via email + password.
+  - [x] **Create or Join a Team:** Let the first user create a team workspace and invite teammates via a shared link, so everyone lands on the same board.
 
 - [ ] **Core Card Posting**
   - [ ] **Post a Status Card:** A one-line card with a status (working on / blocked / done) and an optional link, postable in seconds.
