@@ -2,7 +2,7 @@ import { describe, it, expect, vi } from "vitest";
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 
-import { SwitchTeamDialog } from "./SwitchTeamDialog";
+import { SwitchTeamDialog } from "./switch-team-dialog";
 
 function setup(overrides: Partial<Parameters<typeof SwitchTeamDialog>[0]> = {}) {
   const onCancel = vi.fn();

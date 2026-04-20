@@ -13,8 +13,8 @@ import {
   signInApiAuthSignInPost,
   signUpApiAuthSignUpPost,
 } from "@/shared/api/generated";
-import { AuthForm } from "./AuthForm";
-import { currentUserQueryKey } from "@/shared/model/useCurrentUser";
+import { AuthForm } from "./auth-form";
+import { currentUserQueryKey } from "@/shared/model/use-current-user";
 
 const signInMock = vi.mocked(signInApiAuthSignInPost);
 const signUpMock = vi.mocked(signUpApiAuthSignUpPost);

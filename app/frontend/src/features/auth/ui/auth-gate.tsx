@@ -1,7 +1,7 @@
 import { useEffect, type ReactNode } from "react";
 import { useLocation, useNavigate } from "@tanstack/react-router";
 
-import { useCurrentUser } from "@/shared/model/useCurrentUser";
+import { useCurrentUser } from "@/shared/model/use-current-user";
 
 const PUBLIC_ROUTES = new Set(["/"]);
 

@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 
 import { SwitchTeamDialog } from "@/features/teams";
 import { joinTeamApiTeamsJoinPost } from "@/shared/api/generated";
-import { currentUserQueryKey, useCurrentUser } from "@/shared/model/useCurrentUser";
+import { currentUserQueryKey, useCurrentUser } from "@/shared/model/use-current-user";
 import { Button } from "@/shared/ui/button";
 
 export const PENDING_INVITE_KEY = "pending_invite_code";

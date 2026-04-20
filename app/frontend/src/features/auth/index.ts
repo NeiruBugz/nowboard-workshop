@@ -1,3 +1,3 @@
-export { AuthForm } from "./ui/AuthForm";
-export { AuthGate } from "./ui/AuthGate";
-export { useSignOut } from "./model/useSignOut";
+export { AuthForm } from "./ui/auth-form";
+export { AuthGate } from "./ui/auth-gate";
+export { useSignOut } from "./model/use-sign-out";

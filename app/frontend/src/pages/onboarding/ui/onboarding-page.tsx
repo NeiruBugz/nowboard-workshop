@@ -3,7 +3,7 @@ import { useQueryClient } from "@tanstack/react-query";
 import { useState, type FormEvent } from "react";
 
 import { createTeamApiTeamsPost, updateMeApiUsersMePatch } from "@/shared/api/generated";
-import { currentUserQueryKey, useCurrentUser } from "@/shared/model/useCurrentUser";
+import { currentUserQueryKey, useCurrentUser } from "@/shared/model/use-current-user";
 import { Button } from "@/shared/ui/button";
 import { Input } from "@/shared/ui/input";
 import { Label } from "@/shared/ui/label";

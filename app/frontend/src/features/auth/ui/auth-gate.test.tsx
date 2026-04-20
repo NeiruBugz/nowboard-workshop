@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { resolveDestination, type GateState } from "./AuthGate";
+import { resolveDestination, type GateState } from "./auth-gate";
 
 const LOGGED_OUT: GateState = {
   hasUser: false,

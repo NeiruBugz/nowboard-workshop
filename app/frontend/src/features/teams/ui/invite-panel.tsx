@@ -2,7 +2,7 @@ import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { useEffect, useState } from "react";
 
 import { regenerateCurrentInviteApiTeamsCurrentInviteRegeneratePost } from "@/shared/api/generated";
-import { currentUserQueryKey } from "@/shared/model/useCurrentUser";
+import { currentUserQueryKey } from "@/shared/model/use-current-user";
 import { Button } from "@/shared/ui/button";
 import { Input } from "@/shared/ui/input";
 import { Label } from "@/shared/ui/label";

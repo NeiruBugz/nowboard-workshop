@@ -1,2 +1,2 @@
-export { InvitePanel } from "./ui/InvitePanel";
-export { SwitchTeamDialog } from "./ui/SwitchTeamDialog";
+export { InvitePanel } from "./ui/invite-panel";
+export { SwitchTeamDialog } from "./ui/switch-team-dialog";

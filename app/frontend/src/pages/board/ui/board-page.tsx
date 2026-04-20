@@ -1,6 +1,6 @@
 import { useSignOut } from "@/features/auth";
 import { InvitePanel } from "@/features/teams";
-import { useCurrentUser } from "@/shared/model/useCurrentUser";
+import { useCurrentUser } from "@/shared/model/use-current-user";
 import { Button } from "@/shared/ui/button";
 
 export function BoardPage() {
