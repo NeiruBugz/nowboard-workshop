@@ -1,0 +1,15 @@
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: nowboard-web:latest
+    ports:
+      - "8000:8000"
+    env_file: .env
+    volumes:
+      - nowboard-db:/data
+    restart: unless-stopped
+
+volumes:
+  nowboard-db:
